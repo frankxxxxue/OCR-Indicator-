@@ -1,0 +1,5 @@
+{
+  "name": "Copy of OCR Benchmark Tool",
+  "description": "A professional tool to evaluate OCR accuracy using CER, WER, Punctuation, and Paragraph F1 metrics.",
+  "requestFramePermissions": []
+}
