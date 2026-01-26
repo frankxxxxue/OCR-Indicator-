@@ -15,11 +15,22 @@ export interface DiffItem {
   ocr?: string;   // The word from the OCR output
 }
 
+export interface MetricDetails {
+  score: number;
+  // For display "formula"
+  numerator?: number; // e.g. distance or errors
+  denominator?: number; // e.g. total length
+  breakdown?: {
+    s: number; // substitutions
+    i: number; // insertions
+    d: number; // deletions
+  };
+}
+
 export interface Metrics {
-  cer: number; // Character Error Rate
-  wer: number; // Word Error Rate
-  punctuationAccuracy: number;
-  paragraphF1: number;
+  cer: MetricDetails; 
+  wer: MetricDetails & { diffs: DiffItem[] };
+  punctuationAccuracy: MetricDetails;
   truthLength: number;
   ocrLength: number;
 }
@@ -28,12 +39,10 @@ export interface AnalysisResult extends Metrics {
   pairId: string;
   truthFileName: string;
   ocrFileName: string;
-  wordDiffs: DiffItem[]; // Detailed breakdown of WER
 }
 
 export interface AggregateMetrics {
   avgCer: number;
   avgWer: number;
   avgPunc: number;
-  avgParaF1: number;
 }

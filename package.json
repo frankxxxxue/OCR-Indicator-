@@ -1,5 +1,5 @@
 {
-  "name": "copy-of-ocr-benchmark-tool",
+  "name": "ocr-准确率评测工具",
   "private": true,
   "version": "0.0.0",
   "type": "module",

@@ -1,5 +1,5 @@
 {
-  "name": "Copy of OCR Benchmark Tool",
-  "description": "A professional tool to evaluate OCR accuracy using CER, WER, Punctuation, and Paragraph F1 metrics.",
+  "name": "OCR 准确率评测工具",
+  "description": "专业的 OCR 准确率评估工具，支持 CER (字符错误率)、WER (词错误率) 和标点符号准确率等多维度指标分析。",
   "requestFramePermissions": []
 }
